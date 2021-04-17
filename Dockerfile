@@ -28,6 +28,7 @@ RUN         mkdir -p ${DBT_HOME} && \
                 --requirement requirements.txt
 
 FROM        base
+LABEL       maintainer="Slava Kalashnikov <xemuliam@gmail.com>"
 COPY        --from=build ${DBT_HOME} ${DBT_HOME}
 RUN         cd ${DBT_HOME} && \
             pip --no-cache-dir install \
