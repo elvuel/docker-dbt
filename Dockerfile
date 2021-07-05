@@ -4,7 +4,7 @@ ENV         DBT_HOME=/usr/app \
 
 FROM        base AS build
 ARG         DIST_MIRROR=https://github.com/fishtown-analytics/dbt/archive/refs/tags
-ARG         VERSION=''
+ARG         VERSION='0.19.2'
 ARG         PLUGINS=''
 RUN         apt update && \
             apt install -y --no-install-recommends \
